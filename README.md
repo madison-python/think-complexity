@@ -5,3 +5,14 @@ For our next meeting I will be giving a quick tour of one of Allen Downey's free
 Allen Downey is a computer scientist and author of many books on python and what you can do with python such as _Think Python_, _Think Stats_, _Think Bayes_, and _Think DSP_. You can get links to all of his books here: http://greenteapress.com/wp/
 
 If you have read _Think Complexity_ or are familiar with complexity science, get in touch with me via email or on Slack.
+
+## Setting up
+
+Clone this repo and init the submodules.
+
+```bash
+git clone https://github.com/madison-python/think-complexity.git
+cd think-complexity
+git submodule init
+git submodule update
+```
