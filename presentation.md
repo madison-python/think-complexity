@@ -1,23 +1,37 @@
 ---
-title: Think Complexity
+title: "Think Complexity"
 ---
 
-Allen Downey's Textbook manifesto
-=================================
+# Allen Downey's Textbook manifesto
 
 > Students should read and understand textbooks.
 
-A python chunk
-==============
+# Things you can think about
 
-``` {.python}
-In [1]: a = 1
-   ...: b = 2
-   ...: print(a * b)
-```
+- Think Python
+- **Think Complexity**
+- Think Stats
+- Think Bayes
+- Think DSP
+- _Think Java_
+- _Think Data Structures_
 
-<div class="output">
+# Allen Downey's style
 
-    2
+- Always free
+- Open source code
+- Wikipedia reading assignments
+- Problems to work on throughout
 
-</div>
+# Think Complexity
+
+- Graphs
+- **Small world graphs**
+- Scale-free networks
+- **Cellular Automatons**
+- **Game of Life**
+- Physical modeling
+- Self-organized criticality
+- **Agent-based models**
+- Herds, Flocks, and Traffic Jams
+- Game Theory
