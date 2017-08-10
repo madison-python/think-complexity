@@ -35,3 +35,13 @@ title: "Think Complexity"
 - **Agent-based models**
 - Herds, Flocks, and Traffic Jams
 - Game Theory
+
+# Small world graphs
+
+1. Simple graphs
+2. Connected graphs
+3. Random graphs
+4. Regular graphs
+5. Small world graphs
+
+# Cellular automatons
