@@ -1,11 +1,10 @@
 ---
 title: Think Complexity
-author: Pierce
 ---
 
 # Introducing Allen Downey
 
-[](http://www.olin.edu/sites/default/files/downey_allen_0.jpg)
+![](http://www.olin.edu/sites/default/files/downey_allen_0.jpg)
 
 # Things you can think about with Allen Downey
 
@@ -87,16 +86,14 @@ complete = make_complete_graph(10)
 
 # Creating edges for a regular graph
 
-```{python}
+```python
 def adjacent_edges(nodes, halfk):
-    """Yields edges between each node and `halfk` neighbors."""
+    """Yields edges between nodes and `halfk` neighbors."""
     n = len(nodes)
     for i, u in enumerate(nodes):
         for j in range(i+1, i+halfk+1):
             v = nodes[j % n]
             yield u, v
-
-list(adjacent_edges('abcde', 1))
 ```
 
 # Create a Watts-Strogatz graph by rewiring edges
@@ -129,7 +126,7 @@ def node_clustering(G, u):
         return 0
 
     total = k * (k-1) / 2
-    exist = 0    
+    exist = 0
     for v, w in combinations(neighbors, 2):
         if G.has_edge(v, w):
             exist +=1
@@ -141,7 +138,7 @@ def node_clustering(G, u):
 ```python
 def path_lengths(G):
     length_map = nx.shortest_path_length(G)
-    lengths = [length_map[u][v] for u, v in itertools.combinations(G, 2)]
+    lengths = [length_map[u][v] for u, v in combinations(G, 2)]
     return lengths
 ```
 
@@ -153,7 +150,7 @@ next |  0  |  0  |  1  |  1  |  0  |  0  |  1  |  0  |
 
 # Converting rules to tables
 
-```{python}
+```python
 def make_table(rule):
     """Make the table for a given CA rule."""
     rule = np.array([rule], dtype=np.uint8)
@@ -173,8 +170,9 @@ array[0, cols//2] = 1  # turn center cell "on" at t0
 table = make_table(50)
 
 def step(array, i):
-    """Executes one time step by computing the next row of the array."""
-    corr = np.correlate(array[i-1], [4, 2, 1], mode='same')
+    """Compute the next row of the array."""
+    window = [4, 2, 1]
+    corr = np.correlate(array[i-1], window, mode='same')
     array[i] = table[corr]
 
 for i in range(1, rows):
@@ -198,4 +196,5 @@ For the vast implications of this simple work, see Daniel Dennett's books, _Cons
 
 # Agent-based models
 
-Schelling's segregation model
+- Schelling's model of segregation
+- Epstein & Axtell's Sugarscape
